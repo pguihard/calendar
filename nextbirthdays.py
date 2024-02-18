@@ -45,6 +45,10 @@ class Birthdays():
             birthdays_info = person.get('birthdays', [])
             if birthdays_info:
                 birthday_date = birthdays_info[0].get('date', {})
+                if "year" in birthday_date:
+                    birthyear = str(birthday_date["year"])
+                else:
+                    birthyear = ""    
                 date_str = (
                 f'{birthday_date["month"]}-'
                 f'{birthday_date["day"]}'
@@ -60,7 +64,7 @@ class Birthdays():
                 day_str = date_obj.strftime("%a %d %b %Hh%M")
                 if birthday_date:
                     for name in names:
-                        days.append({'day': day_str, 'event': 'Anniv '+name['displayName']})
+                        days.append({'day': day_str, 'event': 'Anniv '+name['displayName'] + ' ' + birthyear})
         return days
 
 if __name__ == '__main__':
