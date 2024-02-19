@@ -14,7 +14,6 @@ expiring in 7 days.
 import datetime
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
-from colorama import Fore, Style
 
 from authenticate import authenticate_google_api
 from constants import MAXRESULTS
@@ -36,11 +35,8 @@ class Events():
             return result
         try:
             service = build('calendar', 'v3', credentials=creds)
-
             # Call the Calendar API
             now = datetime.datetime.utcnow().isoformat() + 'Z'  # 'Z' indicates UTC time
-            print(Fore.CYAN + Style.BRIGHT + '--- The upcoming events ---' +
-                Style.RESET_ALL)
             # pylint: disable=no-member
             # no need to manage any pagination in this API call as maxResults is coded
             events_result = service.events().list(maxResults=MAXRESULTS, calendarId='primary',

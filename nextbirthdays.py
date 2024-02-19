@@ -44,17 +44,17 @@ class Birthdays():
             names = person.get('names', [])
             birthdays_info = person.get('birthdays', [])
             if birthdays_info:
+                # Get the current date and time
+                current_date = datetime.datetime.now()
                 birthday_date = birthdays_info[0].get('date', {})
                 if "year" in birthday_date:
-                    birthyear = str(birthday_date["year"])
+                    age = str(current_date.year - birthday_date["year"])
                 else:
-                    birthyear = ""    
+                    age = ""
                 date_str = (
                 f'{birthday_date["month"]}-'
                 f'{birthday_date["day"]}'
                 )
-                # Get the current date and time
-                current_date = datetime.datetime.now()
                 current_str = f'{current_date.month}-{current_date.day}'
                 current_obj = datetime.datetime.strptime(current_str, "%m-%d")
                 date_obj = datetime.datetime.strptime(date_str, "%m-%d")
@@ -64,7 +64,8 @@ class Birthdays():
                 day_str = date_obj.strftime("%a %d %b %Hh%M")
                 if birthday_date:
                     for name in names:
-                        days.append({'day': day_str, 'event': 'Anniv '+name['displayName'] + ' ' + birthyear})
+                        days.append({'day': day_str, 'event': name['displayName'] +
+                                     ' ' + age + 'ans'})
         return days
 
 if __name__ == '__main__':

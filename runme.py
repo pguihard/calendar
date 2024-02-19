@@ -5,6 +5,7 @@ pylint runme.py
 Your code has been rated at 10.00/10
 """
 import datetime
+from colorama import Fore, Style
 from nextevents import Events
 from nextbirthdays import Birthdays
 from constants import MAXRESULTS, MAXBIRTHDAYS
@@ -37,6 +38,8 @@ if __name__ == '__main__':
 
     if merge:
         COUNT = 0
+        print(Fore.CYAN + Style.BRIGHT + '--- The upcoming events ---' +
+              Style.RESET_ALL)
         for entry in merge:
             print(f'{entry["day"]} {entry["event"]}')
             COUNT += 1
