@@ -65,7 +65,7 @@ class Birthdays():
                 if birthday_date:
                     for name in names:
                         days.append({'day': day_str, 'event': name['displayName'] +
-                                     ' ' + age + 'ans'})
+                                     ' ' + age + 'ans', 'type': 'anniv'})
         return days
 
 if __name__ == '__main__':

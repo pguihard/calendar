@@ -54,7 +54,7 @@ class Events():
                 date_obj = datetime.datetime.fromisoformat(start)
                 day_str = date_obj.strftime("%a %d %b %Hh%M")
                 event_str = event['summary'][:16]
-                result.append({'day': day_str, 'event': event_str})
+                result.append({'day': day_str, 'event': event_str, 'type': 'event'})
 
         except HttpError as error:
             print(f'An error occurred: {error}')

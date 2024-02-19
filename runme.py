@@ -41,7 +41,11 @@ if __name__ == '__main__':
         print(Fore.CYAN + Style.BRIGHT + '--- The upcoming events ---' +
               Style.RESET_ALL)
         for entry in merge:
-            print(f'{entry["day"]} {entry["event"]}')
+            if entry["type"] == "anniv":
+                print(Fore.YELLOW + f'{entry["day"]} {entry["event"]}' +
+                Style.RESET_ALL)
+            else:
+                print(f'{entry["day"]} {entry["event"]}')
             COUNT += 1
             if COUNT == MAXRESULTS:
                 break
