@@ -34,7 +34,8 @@ def sort_events(data):
 if __name__ == '__main__':
     events = Events()
     birthdays = Birthdays()
-    merge = sort_events(events.get_events() + birthdays.get_birthdays()[:MAXBIRTHDAYS])
+    sorted_birthdays = sort_events(birthdays.get_birthdays())
+    merge = sort_events(events.get_events() + sorted_birthdays[:MAXBIRTHDAYS])
 
     if merge:
         COUNT = 0
