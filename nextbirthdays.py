@@ -50,14 +50,16 @@ class Birthdays():
                 if "year" in birthday_date:
                     age = str(current_date.year - birthday_date["year"])
                 else:
-                    age = ""
+                    age = "?"
                 date_str = (
-                f'{birthday_date["month"]}-'
-                f'{birthday_date["day"]}'
-                )
-                current_str = f'{current_date.month}-{current_date.day}'
-                current_obj = datetime.datetime.strptime(current_str, "%m-%d")
-                date_obj = datetime.datetime.strptime(date_str, "%m-%d")
+                    #current_date.year not used but fixes strptime failure when 29 Feb (leap year)
+                    f'{current_date.year}-'
+                    f'{birthday_date["month"]}-'
+                    f'{birthday_date["day"]}'
+                    )
+                current_str = f'{current_date.year}-{current_date.month}-{current_date.day}'
+                current_obj = datetime.datetime.strptime(current_str, "%Y-%m-%d")
+                date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d")
                 # don't keep the date before the current day
                 if date_obj < current_obj:
                     continue
