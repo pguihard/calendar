@@ -16,7 +16,7 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
 from authenticate import authenticate_google_api
-from constants import MAXRESULTS
+from constants import MAXRESULTS, DATE_FORMAT
 
 # pylint: disable=too-few-public-methods
 class Events():
@@ -52,8 +52,7 @@ class Events():
             for event in events:
                 start = event['start'].get('dateTime', event['start'].get('date'))
                 date_obj = datetime.datetime.fromisoformat(start)
-                # print(date_obj.strftime("%Y %a %d %b %Hh%M"))
-                day_str = date_obj.strftime("%a %d %b %Hh%M")
+                day_str = date_obj.strftime(DATE_FORMAT)
                 event_str = event['summary'][:16]
                 result.append({'day': day_str, 'event': event_str, 'type': 'event'})
 

@@ -63,7 +63,7 @@ class Birthdays():
                 # don't keep the date before the current day
                 if date_obj < current_obj:
                     continue
-                day_str = date_obj.strftime("%a %d %b %Hh%M")
+                day_str = date_obj.strftime("%Y %a %d %b %Hh%M")
                 if birthday_date:
                     for name in names:
                         days.append({'day': day_str, 'event': name['displayName'] +

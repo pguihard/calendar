@@ -8,7 +8,7 @@ import datetime
 from colorama import Fore, Style
 from nextevents import Events
 from nextbirthdays import Birthdays
-from constants import MAXRESULTS, MAXBIRTHDAYS
+from constants import MAXRESULTS, MAXBIRTHDAYS, DATE_FORMAT
 
 def sort_events(data):
     """
@@ -16,16 +16,21 @@ def sort_events(data):
     """
     def get_day(data):
         date_str = data['day']
-        date_obj = datetime.datetime.strptime(date_str, '%a %d %b %Hh%M')
+        date_obj = datetime.datetime.strptime(date_str, DATE_FORMAT)
         return date_obj.day
 
     def get_month(data):
         date_str = data['day']
-        date_obj = datetime.datetime.strptime(date_str, '%a %d %b %Hh%M')
+        date_obj = datetime.datetime.strptime(date_str, DATE_FORMAT)
         return date_obj.month
 
+    def get_year(data):
+        date_str = data['day']
+        date_obj = datetime.datetime.strptime(date_str, DATE_FORMAT)
+        return date_obj.year
+
     # Define key functions for sorting
-    key_functions = (get_month, get_day)
+    key_functions = (get_year, get_month, get_day)
     # Sort the birthdays based on the month
     sorted_data = sorted(data, key=lambda x: tuple(func(x) for func in key_functions))
 
@@ -43,10 +48,10 @@ if __name__ == '__main__':
               Style.RESET_ALL)
         for entry in merge:
             if entry["type"] == "anniv":
-                print(Fore.YELLOW + f'{entry["day"]} {entry["event"]}' +
+                print(Fore.YELLOW + f'{entry["day"][5:]} {entry["event"]}' +
                 Style.RESET_ALL)
             else:
-                print(f'{entry["day"]} {entry["event"]}')
+                print(f'{entry["day"][5:]} {entry["event"]}')
             COUNT += 1
             if COUNT == MAXRESULTS:
                 break
