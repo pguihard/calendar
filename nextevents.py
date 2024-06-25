@@ -36,7 +36,7 @@ class Events():
         try:
             service = build('calendar', 'v3', credentials=creds)
             # Call the Calendar API
-            now = datetime.datetime.utcnow().isoformat() + 'Z'  # 'Z' indicates UTC time
+            now = datetime.datetime.now().isoformat() + 'Z'  # 'Z' indicates UTC time
             # pylint: disable=no-member
             # no need to manage any pagination in this API call as maxResults is coded
             events_result = service.events().list(maxResults=MAXRESULTS, calendarId='primary',
@@ -52,6 +52,7 @@ class Events():
             for event in events:
                 start = event['start'].get('dateTime', event['start'].get('date'))
                 date_obj = datetime.datetime.fromisoformat(start)
+                # print(date_obj.strftime("%Y %a %d %b %Hh%M"))
                 day_str = date_obj.strftime("%a %d %b %Hh%M")
                 event_str = event['summary'][:16]
                 result.append({'day': day_str, 'event': event_str, 'type': 'event'})
