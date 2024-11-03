@@ -6,9 +6,10 @@ Your code has been rated at 10.00/10
 """
 import datetime
 from colorama import Fore, Style
+from nextcollections import Collections
 from nextevents import Events
 from nextbirthdays import Birthdays
-from constants import MAXRESULTS, MAXBIRTHDAYS, DATE_FORMAT
+from constants import MAXRESULTS, MAXBIRTHDAYS, DATE_FORMAT, MAXCOLLECTIONS
 
 def sort_events(data):
     """
@@ -40,7 +41,11 @@ if __name__ == '__main__':
     events = Events()
     birthdays = Birthdays()
     sorted_birthdays = sort_events(birthdays.get_birthdays())
-    merge = sort_events(events.get_events() + sorted_birthdays[:MAXBIRTHDAYS])
+    
+    collections_obj = Collections()
+    collects = collections_obj.get_collections()
+
+    merge = sort_events(events.get_events() + sorted_birthdays[:MAXBIRTHDAYS] + collects[:MAXCOLLECTIONS])
 
     if merge:
         COUNT = 0
@@ -51,7 +56,11 @@ if __name__ == '__main__':
                 print(Fore.YELLOW + f'{entry["day"][5:]} {entry["event"]}' +
                 Style.RESET_ALL)
             else:
-                print(f'{entry["day"][5:]} {entry["event"]}')
+                if entry["type"] == "trash":
+                    print(Fore.GREEN + f'{entry["day"][5:]} {entry["event"]}' +
+                    Style.RESET_ALL)
+                else:    
+                    print(f'{entry["day"][5:]} {entry["event"]}')
             COUNT += 1
             if COUNT == MAXRESULTS:
                 break
