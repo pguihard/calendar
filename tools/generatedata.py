@@ -28,7 +28,15 @@ with open("calendar.txt", "w", encoding="utf-8") as file:
         #TRASHTYPES =
         #  ['Ordures ménagères', 'Verres','Emballages recyclables','Végétaux','Encombrants']
         #
-        # Emballages recyclables le Mercredi PM tous les 15 jours (code 2)
+        # Ordures ménagères Mercredi AM toutes les semaines (code 0)
+        if current_date.weekday() == 2:
+            file.write(f'{current_date.strftime("%Y%m%d")}06 0\n')
+        #
+        # Verres le Lundi AM tous les mois (code 1)
+        if current_date.weekday() == 0 and (current_date - start_glass).days % 28 == 0:
+            file.write(f'{current_date.strftime("%Y%m%d")}06 1\n')
+        #
+        # # Emballages recyclables le Mercredi PM tous les 15 jours (code 2)
         if current_date.weekday() == 2 and (current_date - start_recycle).days % 14 == 0:
             file.write(f'{current_date.strftime("%Y%m%d")}12 2\n')
         #
@@ -41,16 +49,8 @@ with open("calendar.txt", "w", encoding="utf-8") as file:
             and (current_date - start_plant2).days % 14 == 0:
             file.write(f'{current_date.strftime("%Y%m%d")}12 3\n')
         #
-        # Verres le Lundi AM tous les mois (code 1)
-        if current_date.weekday() == 0 and (current_date - start_glass).days % 28 == 0:
-            file.write(f'{current_date.strftime("%Y%m%d")}06 1\n')
-        #
         # Encombrants Lundi AM tous les 3 mois (code 4)
         if current_date.weekday() == 0 and (current_date - start_bulky).days % 91 == 0:
             file.write(f'{current_date.strftime("%Y%m%d")}06 4\n')
-        #
-        # Ordures ménagères Mercredi AM toutes les semaines (code 0)
-        if current_date.weekday() == 2:
-            file.write(f'{current_date.strftime("%Y%m%d")}06 0\n')
-        #
+
         current_date += delta
