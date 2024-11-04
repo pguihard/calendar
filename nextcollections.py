@@ -15,7 +15,7 @@ class Collections:
         """
         constructor
         """
-        self.file_path = "data/Calendrier.txt"
+        self.file_path = "tools/calendar.txt"
         self.collections = []
 
     def add_item(self, date, event):
@@ -30,12 +30,13 @@ class Collections:
         """
         # Get the current date and time
         current_date = datetime.datetime.now()
+
         with open(self.file_path, 'r', encoding='utf-8') as file:
             for line in file:
                 date, value = line.strip().split()
 
                 current_str = f'{current_date.year}{current_date.month}{current_date.day}'
-                current_obj = datetime.datetime.strptime(current_str, "%Y%m%d%H")
+                current_obj = datetime.datetime.strptime(current_str, "%Y%m%d")
                 date_obj = datetime.datetime.strptime(date, "%Y%m%d%H")
                 # don't keep the date before the current day
                 if date_obj < current_obj:
