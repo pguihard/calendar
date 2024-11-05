@@ -5,7 +5,7 @@ pylint nextcollections.py
 Your code has been rated at 10.00
 """
 import datetime
-from constants import TRASHTYPES
+from tools.constants import TRASHTYPES
 
 class Collections:
     """

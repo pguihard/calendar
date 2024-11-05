@@ -1,0 +1,156 @@
+Wednesday 02 October 2024 06-00: Ordures ménagères
+Wednesday 02 October 2024 12-00: Emballages recyclables
+Monday    07 October 2024 12-00: Végétaux
+Wednesday 09 October 2024 06-00: Ordures ménagères
+Wednesday 16 October 2024 06-00: Ordures ménagères
+Wednesday 16 October 2024 12-00: Emballages recyclables
+Monday    21 October 2024 06-00: Verres
+Monday    21 October 2024 12-00: Végétaux
+Wednesday 23 October 2024 06-00: Ordures ménagères
+Monday    28 October 2024 06-00: Encombrants
+Wednesday 30 October 2024 06-00: Ordures ménagères
+Wednesday 30 October 2024 12-00: Emballages recyclables
+
+Monday    04 November 2024 12-00: Végétaux
+Wednesday 06 November 2024 06-00: Ordures ménagères
+Wednesday 13 November 2024 06-00: Ordures ménagères
+Wednesday 13 November 2024 12-00: Emballages recyclables
+Monday    18 November 2024 06-00: Verres
+Monday    18 November 2024 12-00: Végétaux
+Wednesday 20 November 2024 06-00: Ordures ménagères
+Wednesday 27 November 2024 06-00: Ordures ménagères
+Wednesday 27 November 2024 12-00: Emballages recyclables
+
+Wednesday 04 December 2024 06-00: Ordures ménagères
+Wednesday 11 December 2024 06-00: Ordures ménagères
+Wednesday 11 December 2024 12-00: Emballages recyclables
+Monday    16 December 2024 06-00: Verres
+Wednesday 18 December 2024 06-00: Ordures ménagères
+Wednesday 25 December 2024 06-00: Ordures ménagères
+Wednesday 25 December 2024 12-00: Emballages recyclables
+
+Wednesday 01 January 2025 06-00: Ordures ménagères
+Wednesday 08 January 2025 06-00: Ordures ménagères
+Wednesday 08 January 2025 12-00: Emballages recyclables
+Monday    13 January 2025 06-00: Verres
+Wednesday 15 January 2025 06-00: Ordures ménagères
+Wednesday 22 January 2025 06-00: Ordures ménagères
+Wednesday 22 January 2025 12-00: Emballages recyclables
+Monday    27 January 2025 06-00: Encombrants
+Wednesday 29 January 2025 06-00: Ordures ménagères
+
+Wednesday 05 February 2025 06-00: Ordures ménagères
+Wednesday 05 February 2025 12-00: Emballages recyclables
+Monday    10 February 2025 06-00: Verres
+Wednesday 12 February 2025 06-00: Ordures ménagères
+Wednesday 19 February 2025 06-00: Ordures ménagères
+Wednesday 19 February 2025 12-00: Emballages recyclables
+Wednesday 26 February 2025 06-00: Ordures ménagères
+
+Wednesday 05 March 2025 06-00: Ordures ménagères
+Wednesday 05 March 2025 12-00: Emballages recyclables
+Monday    10 March 2025 06-00: Verres
+Wednesday 12 March 2025 06-00: Ordures ménagères
+Wednesday 19 March 2025 06-00: Ordures ménagères
+Wednesday 19 March 2025 12-00: Emballages recyclables
+Monday    24 March 2025 12-00: Végétaux
+Wednesday 26 March 2025 06-00: Ordures ménagères
+
+Wednesday 02 April 2025 06-00: Ordures ménagères
+Wednesday 02 April 2025 12-00: Emballages recyclables
+Monday    07 April 2025 06-00: Verres
+Monday    07 April 2025 12-00: Végétaux
+Wednesday 09 April 2025 06-00: Ordures ménagères
+Wednesday 16 April 2025 06-00: Ordures ménagères
+Wednesday 16 April 2025 12-00: Emballages recyclables
+Monday    21 April 2025 12-00: Végétaux
+Wednesday 23 April 2025 06-00: Ordures ménagères
+Monday    28 April 2025 06-00: Encombrants
+Wednesday 30 April 2025 06-00: Ordures ménagères
+Wednesday 30 April 2025 12-00: Emballages recyclables
+
+Monday    05 May 2025 06-00: Verres
+Monday    05 May 2025 12-00: Végétaux
+Wednesday 07 May 2025 06-00: Ordures ménagères
+Wednesday 14 May 2025 06-00: Ordures ménagères
+Wednesday 14 May 2025 12-00: Emballages recyclables
+Monday    19 May 2025 12-00: Végétaux
+Wednesday 21 May 2025 06-00: Ordures ménagères
+Wednesday 28 May 2025 06-00: Ordures ménagères
+Wednesday 28 May 2025 12-00: Emballages recyclables
+
+Monday    02 June 2025 06-00: Verres
+Monday    02 June 2025 12-00: Végétaux
+Wednesday 04 June 2025 06-00: Ordures ménagères
+Wednesday 11 June 2025 06-00: Ordures ménagères
+Wednesday 11 June 2025 12-00: Emballages recyclables
+Monday    16 June 2025 12-00: Végétaux
+Wednesday 18 June 2025 06-00: Ordures ménagères
+Wednesday 25 June 2025 06-00: Ordures ménagères
+Wednesday 25 June 2025 12-00: Emballages recyclables
+Monday    30 June 2025 06-00: Verres
+Monday    30 June 2025 12-00: Végétaux
+
+Wednesday 02 July 2025 06-00: Ordures ménagères
+Wednesday 09 July 2025 06-00: Ordures ménagères
+Wednesday 09 July 2025 12-00: Emballages recyclables
+Monday    14 July 2025 12-00: Végétaux
+Wednesday 16 July 2025 06-00: Ordures ménagères
+Wednesday 23 July 2025 06-00: Ordures ménagères
+Wednesday 23 July 2025 12-00: Emballages recyclables
+Monday    28 July 2025 06-00: Verres
+Monday    28 July 2025 12-00: Végétaux
+Monday    28 July 2025 06-00: Encombrants
+Wednesday 30 July 2025 06-00: Ordures ménagères
+
+Wednesday 06 August 2025 06-00: Ordures ménagères
+Wednesday 06 August 2025 12-00: Emballages recyclables
+Monday    11 August 2025 12-00: Végétaux
+Wednesday 13 August 2025 06-00: Ordures ménagères
+Wednesday 20 August 2025 06-00: Ordures ménagères
+Wednesday 20 August 2025 12-00: Emballages recyclables
+Monday    25 August 2025 06-00: Verres
+Monday    25 August 2025 12-00: Végétaux
+Wednesday 27 August 2025 06-00: Ordures ménagères
+
+Wednesday 03 September 2025 06-00: Ordures ménagères
+Wednesday 03 September 2025 12-00: Emballages recyclables
+Monday    08 September 2025 12-00: Végétaux
+Wednesday 10 September 2025 06-00: Ordures ménagères
+Wednesday 17 September 2025 06-00: Ordures ménagères
+Wednesday 17 September 2025 12-00: Emballages recyclables
+Monday    22 September 2025 06-00: Verres
+Monday    22 September 2025 12-00: Végétaux
+Wednesday 24 September 2025 06-00: Ordures ménagères
+
+Wednesday 01 October 2025 06-00: Ordures ménagères
+Wednesday 01 October 2025 12-00: Emballages recyclables
+Monday    06 October 2025 12-00: Végétaux
+Wednesday 08 October 2025 06-00: Ordures ménagères
+Wednesday 15 October 2025 06-00: Ordures ménagères
+Wednesday 15 October 2025 12-00: Emballages recyclables
+Monday    20 October 2025 06-00: Verres
+Monday    20 October 2025 12-00: Végétaux
+Wednesday 22 October 2025 06-00: Ordures ménagères
+Monday    27 October 2025 06-00: Encombrants
+Wednesday 29 October 2025 06-00: Ordures ménagères
+Wednesday 29 October 2025 12-00: Emballages recyclables
+
+Monday    03 November 2025 12-00: Végétaux
+Wednesday 05 November 2025 06-00: Ordures ménagères
+Wednesday 12 November 2025 06-00: Ordures ménagères
+Wednesday 12 November 2025 12-00: Emballages recyclables
+Monday    17 November 2025 06-00: Verres
+Monday    17 November 2025 12-00: Végétaux
+Wednesday 19 November 2025 06-00: Ordures ménagères
+Wednesday 26 November 2025 06-00: Ordures ménagères
+Wednesday 26 November 2025 12-00: Emballages recyclables
+
+Wednesday 03 December 2025 06-00: Ordures ménagères
+Wednesday 10 December 2025 06-00: Ordures ménagères
+Wednesday 10 December 2025 12-00: Emballages recyclables
+Monday    15 December 2025 06-00: Verres
+Wednesday 17 December 2025 06-00: Ordures ménagères
+Wednesday 24 December 2025 06-00: Ordures ménagères
+Wednesday 24 December 2025 12-00: Emballages recyclables
+Wednesday 31 December 2025 06-00: Ordures ménagères

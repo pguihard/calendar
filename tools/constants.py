@@ -1,0 +1,1 @@
+TRASHTYPES = ['Ordures ménagères', 'Verres','Emballages recyclables','Végétaux','Encombrants']
