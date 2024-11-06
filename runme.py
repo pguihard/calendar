@@ -41,15 +41,17 @@ if __name__ == '__main__':
     events = Events()
     birthdays = Birthdays()
     sorted_birthdays = sort_events(birthdays.get_birthdays())
-    
+
     collections_obj = Collections()
     collects = collections_obj.get_collections()
 
-    merge = sort_events(events.get_events() + sorted_birthdays[:MAXBIRTHDAYS] + collects[:MAXCOLLECTIONS])
+    merge = sort_events(events.get_events() + sorted_birthdays[:MAXBIRTHDAYS] +
+                         collects[:MAXCOLLECTIONS])
 
     if merge:
         COUNT = 0
-        print(Fore.CYAN + Style.BRIGHT + '--- The upcoming events ---' +
+        print(Fore.CYAN + Style.BRIGHT +
+              f'--- The {min(len(merge), MAXRESULTS)} upcoming events ---' +
               Style.RESET_ALL)
         for entry in merge:
             if entry["type"] == "anniv":
@@ -59,7 +61,7 @@ if __name__ == '__main__':
                 if entry["type"] == "trash":
                     print(Fore.GREEN + f'{entry["day"][5:]} {entry["event"]}' +
                     Style.RESET_ALL)
-                else:    
+                else:
                     print(f'{entry["day"][5:]} {entry["event"]}')
             COUNT += 1
             if COUNT == MAXRESULTS:

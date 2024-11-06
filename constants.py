@@ -1,5 +1,5 @@
 # max number of entries to display
-MAXRESULTS = 16
+MAXRESULTS = 24
 # max number of birthdays to display
 MAXBIRTHDAYS = 4
 # max number of collections to display
