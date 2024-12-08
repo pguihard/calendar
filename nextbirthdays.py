@@ -51,9 +51,15 @@ class Birthdays():
                     age = str(current_date.year - birthday_date["year"])
                 else:
                     age = "?"
+                cur_mm_dd = f'{current_date.month}{str(current_date.day).zfill(2)}'
+                bir_mm_dd = f'{birthday_date["month"]}{str(birthday_date["day"]).zfill(2)}'
+                if  int(bir_mm_dd) < int(cur_mm_dd):
+                    bir_yy = current_date.year + 1
+                else:
+                    bir_yy = current_date.year
                 date_str = (
                     #current_date.year not used but fixes strptime failure when 29 Feb (leap year)
-                    f'{current_date.year}-'
+                    f'{bir_yy}-'
                     f'{birthday_date["month"]}-'
                     f'{birthday_date["day"]}'
                     )
@@ -76,6 +82,6 @@ if __name__ == '__main__':
     if birthd:
         print('Upcoming Birthdays:')
         for entry in birthd:
-            print(f'{entry["day"]} {entry["event"]}')
+            print(f'{entry["day"]} - {entry["event"]} - {entry["type"]}')
     else:
         print('No upcoming birthdays found.')

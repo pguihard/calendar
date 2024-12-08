@@ -44,12 +44,14 @@ class Events():
                                                 singleEvents=True,
                                                 orderBy='startTime').execute()
             events = events_result.get('items', [])
+            # Filter out birthday events 
+            non_birthday_events = [ event for event in events if 'anniv' not in event.get('summary', '').lower() ]
 
-            if not events:
+            if not non_birthday_events:
                 print('No upcoming events found.')
                 return None
             # Prints the start and name of the next NUMBER events
-            for event in events:
+            for event in non_birthday_events:
                 start = event['start'].get('dateTime', event['start'].get('date'))
                 date_obj = datetime.datetime.fromisoformat(start)
                 day_str = date_obj.strftime(DATE_FORMAT)
