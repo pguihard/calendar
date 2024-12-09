@@ -44,8 +44,9 @@ class Events():
                                                 singleEvents=True,
                                                 orderBy='startTime').execute()
             events = events_result.get('items', [])
-            # Filter out birthday events 
-            non_birthday_events = [ event for event in events if 'anniv' not in event.get('summary', '').lower() ]
+            # Filter out birthday events
+            non_birthday_events = \
+                [ event for event in events if 'anniv' not in event.get('summary', '').lower() ]
 
             if not non_birthday_events:
                 print('No upcoming events found.')

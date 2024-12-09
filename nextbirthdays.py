@@ -82,6 +82,6 @@ if __name__ == '__main__':
     if birthd:
         print('Upcoming Birthdays:')
         for entry in birthd:
-            print(f'{entry["day"]} - {entry["event"]} - {entry["type"]}')
+            print(f'{entry["day"]} - {entry["event"]}')
     else:
         print('No upcoming birthdays found.')
