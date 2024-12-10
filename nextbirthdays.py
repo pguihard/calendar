@@ -47,16 +47,16 @@ class Birthdays():
                 # Get the current date and time
                 current_date = datetime.datetime.now()
                 birthday_date = birthdays_info[0].get('date', {})
-                if "year" in birthday_date:
-                    age = str(current_date.year - birthday_date["year"])
-                else:
-                    age = "?"
                 cur_mm_dd = f'{current_date.month}{str(current_date.day).zfill(2)}'
                 bir_mm_dd = f'{birthday_date["month"]}{str(birthday_date["day"]).zfill(2)}'
                 if  int(bir_mm_dd) < int(cur_mm_dd):
                     bir_yy = current_date.year + 1
                 else:
                     bir_yy = current_date.year
+                if "year" in birthday_date:
+                    age = str(bir_yy - birthday_date["year"])
+                else:
+                    age = "?"
                 date_str = (
                     #current_date.year not used but fixes strptime failure when 29 Feb (leap year)
                     f'{bir_yy}-'
