@@ -15,23 +15,33 @@ def sort_events(data):
     """
     sort data by month and day criteria
     """
-    def get_day(data):
+    def get_year(data):
         date_str = data['day']
         date_obj = datetime.datetime.strptime(date_str, DATE_FORMAT)
-        return date_obj.day
+        return date_obj.year
 
     def get_month(data):
         date_str = data['day']
         date_obj = datetime.datetime.strptime(date_str, DATE_FORMAT)
         return date_obj.month
 
-    def get_year(data):
+    def get_day(data):
         date_str = data['day']
         date_obj = datetime.datetime.strptime(date_str, DATE_FORMAT)
-        return date_obj.year
+        return date_obj.day
+
+    def get_hour(data):
+        date_str = data['day']
+        date_obj = datetime.datetime.strptime(date_str, DATE_FORMAT)
+        return date_obj.hour
+
+    def get_minute(data):
+        date_str = data['day']
+        date_obj = datetime.datetime.strptime(date_str, DATE_FORMAT)
+        return date_obj.minute
 
     # Define key functions for sorting
-    key_functions = (get_year, get_month, get_day)
+    key_functions = (get_year, get_month, get_day, get_hour, get_minute)
     # Sort the birthdays based on the month
     sorted_data = sorted(data, key=lambda x: tuple(func(x) for func in key_functions))
 
