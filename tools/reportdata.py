@@ -1,9 +1,17 @@
+"""
+Creating report.txt from calendar.txt
+pylint tools/reportdata.py
+Your code has been rated at 10.00/10
+"""
 import datetime
-from colorama import Fore
 from constants import TRASHTYPES
 
 def read_and_process_calendar(input_file, output_file):
-    with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:
+    """
+    creating a file that can be processed
+    """
+    with open(input_file, 'r',  encoding="utf-8") as infile, \
+        open(output_file, 'w',  encoding="utf-8") as outfile:
         current_month = None
         for line in infile:
             parts = line.strip().split()
