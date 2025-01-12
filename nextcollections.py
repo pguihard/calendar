@@ -22,7 +22,7 @@ class Collections:
         """
         add items into the area
         """
-        self.collections.append({'day': date, 'event': TRASHTYPES[int(event)], 'type': 'trash'})      
+        self.collections.append({'day': date, 'event': TRASHTYPES[int(event)], 'type': 'trash'})
 
     def get_collections(self):
         """
@@ -41,7 +41,6 @@ class Collections:
                 if date_obj < current_obj:
                     continue
                 day_str = date_obj.strftime("%Y %a %d %b %Hh%M")
-          
                 self.add_item(day_str, value)
             return self.collections
 
