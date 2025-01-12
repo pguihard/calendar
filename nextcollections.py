@@ -34,8 +34,7 @@ class Collections:
         with open(self.file_path, 'r', encoding='utf-8') as file:
             for line in file:
                 date, value = line.strip().split()
-
-                current_str = f'{current_date.year}{current_date.month}{current_date.day}'
+                current_str = f'{current_date.year}{current_date.month:02d}{current_date.day:02d}'
                 current_obj = datetime.datetime.strptime(current_str, "%Y%m%d")
                 date_obj = datetime.datetime.strptime(date, "%Y%m%d%H")
                 # don't keep the date before the current day
