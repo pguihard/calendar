@@ -1,1 +1,1 @@
-TRASHTYPES = ['Ordures ménagères', 'Verres','Emballages recyclables','Végétaux','Encombrants']
+TRASHTYPES = ['Ordures ménagères', 'Verres','Emballages recycl','Végétaux','Encombrants']
