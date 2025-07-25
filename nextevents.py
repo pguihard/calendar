@@ -36,7 +36,12 @@ class Events():
         try:
             service = build('calendar', 'v3', credentials=creds)
             # Call the Calendar API
-            now = datetime.datetime.now().isoformat() + 'Z'  # 'Z' indicates UTC time
+            # To get events from the beginning of today, we'll set the time to midnight.
+            # We use astimezone() to get a timezone-aware datetime object in the local timezone.
+            start_of_today = datetime.datetime.now().astimezone().replace(
+                hour=0, minute=0, second=0, microsecond=0
+            )
+            now = start_of_today.isoformat()
             # pylint: disable=no-member
             # no need to manage any pagination in this API call as maxResults is coded
             events_result = service.events().list(maxResults=MAXRESULTS, calendarId='primary',
@@ -44,15 +49,15 @@ class Events():
                                                 singleEvents=True,
                                                 orderBy='startTime').execute()
             events = events_result.get('items', [])
-
             if not events:
                 print('No upcoming events found.')
-                return None
+                return result
             # Prints the start and name of the next NUMBER events
             for event in events:
                 if event.get('eventType') == 'birthday':
                     continue
                 start = event['start'].get('dateTime', event['start'].get('date'))
+
                 date_obj = datetime.datetime.fromisoformat(start)
                 day_str = date_obj.strftime(DATE_FORMAT)
                 event_str = event['summary'][:16]
