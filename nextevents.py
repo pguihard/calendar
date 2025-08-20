@@ -53,9 +53,14 @@ class Events():
                 print('No upcoming events found.')
                 return result
             # Prints the start and name of the next NUMBER events
+            chi = 0
             for event in events:
                 if event.get('eventType') == 'birthday':
                     continue
+                if event['summary'].startswith('Chi '):
+                    chi=chi+1
+                    if chi > 1:
+                        continue
                 start = event['start'].get('dateTime', event['start'].get('date'))
 
                 date_obj = datetime.datetime.fromisoformat(start)
