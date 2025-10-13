@@ -59,7 +59,7 @@ class Events():
                     continue
                 if event['summary'].startswith('Chi '):
                     chi=chi+1
-                    if chi > 1:
+                    if chi > 2:
                         continue
                 start = event['start'].get('dateTime', event['start'].get('date'))
 
