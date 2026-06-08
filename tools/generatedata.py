@@ -6,16 +6,16 @@ Your code has been rated at 10.00
 """
 import datetime
 
-start_date = datetime.date(2025, 1, 1)
-end_date = datetime.date(2025, 12, 31)
+start_date = datetime.date(2026, 1, 1)
+end_date = datetime.date(2026, 12, 31)
 
-start_recycle = datetime.date(2025, 1, 8)
+start_recycle = datetime.date(2026, 1, 7)
 
-start_plant = datetime.date(2025, 3, 24)
+start_plant = datetime.date(2026, 3, 9)
 
-start_glass = datetime.date(2025, 10, 20)
+start_glass = datetime.date(2026, 4, 20)
 
-start_bulky = datetime.date(2025, 1, 27)
+start_bulky = datetime.date(2026, 1, 26)
 
 delta = datetime.timedelta(days=1)
 
@@ -38,7 +38,7 @@ with open("calendar.txt", "w", encoding="utf-8") as file:
             file.write(f'{current_date.strftime("%Y%m%d")}12 2\n')
         #
         # Végétaux le Lundi PM tous les 15 jours (code 3)
-        # Arrêt le 18 Novembre 2024, reprise le 24 Mars 2025
+        # Arrêt le 18 Novembre 2024, reprise le 24 Mars 2026
         if current_date.weekday() == 0 and start_plant <= current_date \
             and (current_date - start_plant).days % 14 == 0:
             file.write(f'{current_date.strftime("%Y%m%d")}12 3\n')
