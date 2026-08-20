@@ -13,7 +13,7 @@ start_recycle = datetime.date(2026, 1, 7)
 
 start_plant = datetime.date(2026, 3, 9)
 
-start_glass = datetime.date(2026, 4, 20)
+start_glass = datetime.date(2026, 8, 17)
 
 start_bulky = datetime.date(2026, 1, 26)
 

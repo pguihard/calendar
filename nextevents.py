@@ -65,11 +65,11 @@ class Events():
 
                 date_obj = datetime.datetime.fromisoformat(start)
                 day_str = date_obj.strftime(DATE_FORMAT)
-                # We limit the event name to 18 characters from the right to avoid too long lines in the display
-                if len(event['summary']) > 18:
-                    event_str = event['summary'][-18:]
+                # We limit the event name to 21 characters from the right to avoid too long lines in the display
+                if len(event['summary']) > 21:
+                    event_str = event['summary'][-21:]
                 else:
-                    event_str = event['summary'][:18]
+                    event_str = event['summary'][:21]
                 result.append({'day': day_str, 'event': event_str, 'type': 'event'})
 
         except HttpError as error:
